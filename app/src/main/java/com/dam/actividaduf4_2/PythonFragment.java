@@ -25,7 +25,6 @@ public class PythonFragment extends Fragment {
         // Required empty public constructor
     }
 
-
     public static PythonFragment newInstance(int size) {
         PythonFragment fragment = new PythonFragment();
         Bundle args = new Bundle();
@@ -48,8 +47,8 @@ public class PythonFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_python, container, false);
         TextView tv = view.findViewById(R.id.tv_fl_python);
+        // Estos no son tamaño fijo, sino que se establecen en función del parámetro sizeParam.
         tv.setTextSize(TypedValue.COMPLEX_UNIT_SP, sizeParam);
         return view;
     }
-
 }

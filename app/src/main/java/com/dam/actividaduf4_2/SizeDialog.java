@@ -22,6 +22,8 @@ import android.widget.Toast;
  */
 public class SizeDialog extends DialogFragment {
 
+    // Lo declaramos aquí para que sea accesible desde todos los métodos.
+    // Pero lo inicializamos en el metodo onAttach.
     OnDatosListener listener;
 
     private static final String SIZE_PARAM = "sizeParam";
@@ -33,9 +35,14 @@ public class SizeDialog extends DialogFragment {
     }
 
     public static SizeDialog newInstance(int size) {
+        // Creamos el fragmento y le pasamos los argumentos.
         SizeDialog fragment = new SizeDialog();
+        // Bundle = empaquetado.
+        // Es un objeto que nos permite pasar datos al fragmentos.
         Bundle args = new Bundle();
+        // Guardamos los datos en el empaquetado.
         args.putInt(SIZE_PARAM, size);
+        // Le pasamos el empaquetado al fragmento.
         fragment.setArguments(args);
         return fragment;
     }
@@ -43,27 +50,32 @@ public class SizeDialog extends DialogFragment {
     @NonNull
     @Override
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
-
+        // Recuperamos los datos del empaquetado y con el getInt recuperamos el dato.
         sizeParam = getArguments().getInt(SIZE_PARAM);
 
         // Usamos el inflater para crear la vista.
         View v = getLayoutInflater().inflate(R.layout.fragment_size_dialog, null);
         EditText etSizeDialog = v.findViewById(R.id.et_size_dialog);
+        // Le ponemos el valor que tiene el tamaño.
         etSizeDialog.setText(String.valueOf(sizeParam));
 
+        // Creamos el diálogo.
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        // Le pasamos la vista.
         builder.setView(v);
 
         // En el botón de aceptar, no hacemos nada, porque vamos a consultar sus datos.
         // En el botón de cancelar, cerramos el diálogo.
-        builder.setTitle("Hola")
+        builder.setTitle(R.string.ad_cambiar_size_title)
                 .setPositiveButton(R.string.btnd_aceptar, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        if (etSizeDialog.getText().toString().isEmpty()) {
+                        // Controlamos que no esté vacío con un mensaje de error.
+                        if (etSizeDialog.getText().toString().trim().isEmpty()) {
                             //Snackbar.make(v, "Error vacio", Snackbar.LENGTH_LONG).show();
-                            Toast.makeText(getActivity(), "Error vacio", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getActivity(), R.string.ad_cambiar_size_error, Toast.LENGTH_LONG).show();
                         } else {
+                            // Llamamos al método del listener y le pasamos el tamaño.
                             listener.onAceptarDatosListener(Integer.parseInt(etSizeDialog.getText().toString()));
                         }
                     }
@@ -100,6 +112,7 @@ public class SizeDialog extends DialogFragment {
 
     // Este método es para que el listener sea nulo cuando se desatache el fragmento.
     // Si no lo hacemos, el listener no se desatachará y podremos tener problemas.
+    // Esto es cuando un fragmento se quita.
     @Override
     public void onDetach() {
         if (listener != null) {

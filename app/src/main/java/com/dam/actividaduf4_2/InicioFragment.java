@@ -21,7 +21,6 @@ public class InicioFragment extends Fragment {
         // Required empty public constructor
     }
 
-
     public static InicioFragment newInstance() {
         return new InicioFragment();
     }
@@ -36,6 +35,8 @@ public class InicioFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_inicio, container, false);
         TextView tv = view.findViewById(R.id.tv_fl_inicio);
+        // Establecemos el tamaño del texto al textView.
+        // Este es el del InicioFragment, que es tamaño fijo.
         tv.setTextSize(TypedValue.COMPLEX_UNIT_SP, 24);
         return view;
     }

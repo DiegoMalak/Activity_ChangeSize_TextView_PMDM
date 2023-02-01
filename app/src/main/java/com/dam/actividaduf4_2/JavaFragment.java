@@ -46,6 +46,7 @@ public class JavaFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_java, container, false);
         TextView tv = view.findViewById(R.id.tv_fl_java);
+        // Estos no son tamaño fijo, sino que se establecen en función del parámetro sizeParam.
         tv.setTextSize(TypedValue.COMPLEX_UNIT_SP, sizeParam);
         return view;
     }

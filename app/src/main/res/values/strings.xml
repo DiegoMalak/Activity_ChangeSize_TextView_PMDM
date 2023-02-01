@@ -15,4 +15,6 @@
     <string name="btnd_cancelar">Cancelar</string>
     <string name="et_size_dialog_hint">Introduce el tamaño</string>
     <string name="error_onAttach">Error on Attach</string>
+    <string name="ad_cambiar_size_error">Error, vacío, debes poner un valor.</string>
+    <string name="ad_cambiar_size_title">Cambiar tamaño del texto.</string>
 </resources>

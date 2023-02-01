@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity"
+    >
+    <item
+        android:id="@+id/menuJava"
+        android:title="@string/mn_java"
+        android:orderInCategory="1"
+        app:showAsAction="never"
+        />
+    <!-- El showAsAction tiene diferentes modalidades,
+     con el ifRoom si el menú ocupara mucho se apilarian en un menu
+     de tres puntos, con el never salen solo en el menu de tres puntos
+     y el always siempre aparece, este se suele poner solo al
+     importante como el settings.-->
+    <item
+        android:id="@+id/menuPython"
+        android:title="@string/mn_python"
+        android:orderInCategory="2"
+        app:showAsAction="never"
+        />
+
+    <item
+        android:id="@+id/menuSalir"
+        android:title="@string/mn_salir"
+        android:orderInCategory="3"
+        app:showAsAction="always"
+        />
+
+
+
+</menu>

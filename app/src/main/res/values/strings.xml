@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Actividad UF4_2</string>
+    <string name="btn_cambiar_tamanio">Cambiar tamaño</string>
+    <string name="mn_salir">Salir</string>
+    <string name="mn_java">Java</string>
+    <string name="mn_python">Python</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="tv_java_hello_world">"public class HelloWorld {\n\tpublic static void main(String args[]) {\n\t\tSystem.out.println(\"¡Hola Mundo!\");\n\t}\n} "</string>
+    <string name="tv_python_hello_world">"#!/usr/bin/env python\n# -*- coding: utf-8 -*-\nprint(\"¡Hola mundo!\") "</string>
+    <string name="dialog_salir_title">DIALOG SALIR</string>
+    <string name="confirmar_salir">¿Seguro que quieres salir?</string>
+    <string name="btnd_aceptar">Aceptar</string>
+    <string name="btnd_cancelar">Cancelar</string>
+    <string name="et_size_dialog_hint">Introduce el tamaño</string>
+    <string name="error_onAttach">Error on Attach</string>
+</resources>

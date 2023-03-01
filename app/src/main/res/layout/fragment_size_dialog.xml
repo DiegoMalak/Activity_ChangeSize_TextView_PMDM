@@ -10,8 +10,9 @@
         android:id="@+id/et_size_dialog"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="number"
+        android:inputType="numberSigned"
         android:hint="@string/et_size_dialog_hint"
         />
-
+    <!-- el inoutType le ponemos el numberSigned
+    para que solo acepte numeros enteros -->
 </FrameLayout>

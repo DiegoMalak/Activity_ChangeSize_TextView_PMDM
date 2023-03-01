@@ -66,6 +66,7 @@ public class SizeDialog extends DialogFragment {
 
         // En el botón de aceptar, no hacemos nada, porque vamos a consultar sus datos.
         // En el botón de cancelar, cerramos el diálogo.
+        // Cambiamos el listener del botón de aceptar, para poder controlarlo y que si está vacío no se cierre.
         builder.setTitle(R.string.ad_cambiar_size_title)
                 .setPositiveButton(R.string.btnd_aceptar, new DialogInterface.OnClickListener() {
                     @Override
@@ -83,7 +84,7 @@ public class SizeDialog extends DialogFragment {
                 .setNegativeButton(R.string.btnd_cancelar, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        // Cerramos el diálogo.
+                        // Cerramos el diálogo al pulsar el botón de cancelar.
                         dialogInterface.dismiss();
                     }
                 });

@@ -54,7 +54,8 @@ public class MainActivity extends AppCompatActivity implements OnDatosListener {
 
     // Este método es el que hará que se sustituya el fragmento actual por el que le pasemos,
     // pasandole el fragmento por parámetro. Remplazamos el flContenedor por el fragmento que le pasemos.
-    // Invocamos este metodo par cuando pulsemos java o python, y en el onCreate para mostrar el fragmento de inicio.
+    // Invocamos este metodo par cuando pulsemos java o python, y en el onCreate para mostrar el
+    // fragmento de inicio.
     private void replaceFragment(Fragment fragment) {
         getSupportFragmentManager()
                 .beginTransaction()

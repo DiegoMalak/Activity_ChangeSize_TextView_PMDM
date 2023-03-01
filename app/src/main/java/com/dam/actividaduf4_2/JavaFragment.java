@@ -32,6 +32,7 @@ public class JavaFragment extends Fragment {
         return fragment;
     }
 
+    // Cogemos los argumentos que se le pasan en el newInstance.
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
